@@ -1,0 +1,479 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>David & Cinthia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/YouTubePopUp.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<audio id="miAudio" src="audio/SayYouWontLetGo.mp3" loop></audio>
+
+<script>
+  document.body.addEventListener("click", function() {
+    var miAudio = document.getElementById("miAudio");
+    miAudio.play();
+    document.body.removeEventListener("click", arguments.callee);
+  });
+</script>
+
+<script>
+    // Obtenemos una referencia a la imagen y al archivo de audio
+    const imagen = document.getElementById('miImagen');
+    const audio = new Audio('audio/SayYouWontLetGo.mp3');
+    // Añadimos un evento clic a la imagen
+    imagen.addEventListener('click', function() {
+        // Verificamos si el audio está pausado, si es así, lo iniciamos
+        if (audio.paused) {
+            audio.play();
+        } else {
+            // Si el audio ya está reproduciéndose y hacemos clic nuevamente, lo pausamos
+            audio.pause();
+            // Redireccionamos a "index.html" después de pausar el audio
+            redirectToIndex();
+        }
+    });
+</script>
+
+<body>
+       <!-- Preloader -->
+    <div class="preloader">
+        <div class="lds-heart">
+            <div></div>
+        </div>
+    </div>
+    <!-- Progress-wrapp scroll-button -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<!-- Logo -->
+            <div class="logo-wrapper navbar-brand valign">
+                <img src="images/audio.png" alt="Imagen" id="miImagen">&nbsp;&nbsp;
+                    <div class="logo">
+                        <!-- <img src="images/logo-light.png" class="logo-img" alt=""> -->
+                        <a href="index.html"><h2>David &amp; Cinthia</h2></a>
+                    </div>
+            </div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="icon-bar"><i class="ti-line-double"></i></span> </button>
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link active" href="#home" data-scroll-nav="0">Inicio</a></li>
+					<li class="nav-item"><a class="nav-link" href="#story" data-scroll-nav="2">Historia</a></li>
+					<li class="nav-item"><a class="nav-link" href="#whenwhere" data-scroll-nav="6">Cuándo y Dónde?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gift" data-scroll-nav="8">Regalos</a></li>
+					<li class="nav-item"><a class="nav-link" href="#rsvp" data-scroll-nav="7">Reserva</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+   
+    <!-- Slider section -->
+    <header id="home" data-scroll-index="0">
+        <div class="mary-hero js-fullheight">
+            <div class="flexslider js-fullheight">
+                <ul class="slides">
+                    <li class="bg-fixed" style="background-image: url(images/slider/1.jpg);" data-overlay-dark="2" id="icon">
+                        <div class="overlay"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center js-fullheight slider-text">
+                                    <div class="slider-text-inner mx-auto">
+                                        <h2>David & Cinthia</h2>
+                                        <h6>24 de Febrero, 2024 — Punta Islita</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <!-- Welcome section -->
+    <div id="welcome" class="welcome section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="welcome-mt">
+                        <div class="welcome-image-wrapper">
+                            <div class="img">
+                                <a href="#" data-scroll-nav="1"><img src="images/couple.jpg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 offset-md-2 text-center">
+                    <h6 class="section-subtitle">Hola & Bienvenido</h6>
+                    <h2 class="section-title">¡Nos vamos a casar!</h2>
+                    <p>"El día más importante de nuestras vidas ha llegado."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Countdown section -->
+    <div id="countdown" class="section-padding bg-img bg-fixed" data-overlay-dark="1" data-background="images/banner/4.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="section-head col-md-12">
+                    <h6>Nos convertiremos en una familia en</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul>
+                        <li><span id="days"></span>Días</li>
+                        <li><span id="hours"></span>Horas</li>
+                        <li><span id="minutes"></span>Minutos</li>
+                        <li><span id="seconds"></span>Segundos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Story section -->
+    <div id="story" class="story section-padding" data-scroll-index="2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center animate-box" data-animate-effect="fadeInUp">
+                    <h6 class="section-subtitle">David & Cinthia</h6>
+                    <h2 class="section-title">Nuestra Historia</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
+                    <div class="owl-carousel owl-theme">
+                        <div class="story left">
+                            <figure><img src="images/story/4.jpg" alt="" class="img-fluid"></figure>
+                            <div class="caption">
+                                <h6>19 de octubre, 2012</h6>
+                                <h4>Nos conocimos</h4>
+                                <p>Con tan solo 15 y 16 años, nos conocimos, en una noche de talentos del colegio al que David asistía, teníamos un amigo en común, el cuál fue cupido en nuestra relación. 
+                                    <br>"Saber que todo comenzó por un helado, que me prometieron si le hablaba a David esa noche".</p>
+                            </div>
+                        </div>
+                        <div class="story left">
+                            <figure><img src="images/story/2.jpg" alt="" class="img-fluid"></figure>
+                            <div class="caption">
+                                <h6>Noviembre, 2012</h6>
+                                <h4>Primera cita</h4>
+                                <p>"Después de varias semanas de hablar por mensajes, fuimos a ver un partido, comimos un helado y entablamos una conversación por varias horas, recordamos que ese día también nuestro amigo estuvo ahí, siempre siendo cupido".</p>
+                            </div>
+                        </div>
+                        <div class="story left">
+                            <figure><img src="images/story/1.jpg" alt="" class="img-fluid"></figure>
+                            <div class="caption">
+                                <h6>24 de febrero, 2013</h6>
+                                <h4>Nos hicimos novios</h4>
+                                <p>"Pasamos casi cuatro meses saliendo y fue genial, por lo que decidimos dar el siguiente paso y empezar una nueva aventura".</p>
+                            </div>
+                        </div>
+                        <div class="story left">
+                            <figure><img src="images/story/3.jpg" alt="" class="img-fluid"></figure>
+                            <div class="caption">
+                                <h6>04 de abril, 2023</h6>
+                                <h4>Propuesta de matrimonio</h4>
+                                <p>Muchas veces se dice que las personas tienen varios amores en su vida, aun así, para ambos, nuestros amores fueron las veces que nos encontrábamos de nuevo, dejábamos el querer por el amar y nos ayudábamos a crecer con la misma fuerza con la que el sol atrae a las olas.<br>
+                                    Muchas veces nos cuestionamos el momento, aun así, entendimos con el tiempo que va más allá de lo natural, porque somos nosotros y Dios juntos, que obstáculo tras obstáculo hemos construido nuestro propio escenario de colores y paz.<br>
+                                    Muchas veces, un 24 de febrero, hemos anhelado y soñado con este día, que con nuestros amores y obstáculos llegó para llenar nuestras vidas, con una aventura más, donde esta vez, cerraremos como futuros esposos.<br>
+                                    Esta vez el 04 de abril y nuestros diez años de la mano, nos ha abierto un nuevo camino lleno de emoción, donde su principio quedará marcado en la colorida y sonriente Cartagena. Con una cena rodeada de aroma a sal y un viento que carga frescura, la noche que nos cambiaría por el resto de nuestras vidas se presentó con un: “Yo le tengo que hacer una pregunta, amor, ¿Usted se quiere casar conmigo?” 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Video section 
+    <div id="video" class="story-video section-padding bg-img bg-fixed" data-overlay-dark="2" data-background="images/banner/3.jpg">
+        <div class="container">
+            <div class="video-wrapper">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="caption">
+                            <h6 class="subtitle">UNA FAMILIA QUE COMIENZA</h6>
+                            <h2 class="title">Mira nuestra historia de amor</h2><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-60 img text-center">
+                        <a class="vid valign" href="https://youtu.be/bkMjpEixNrg?t=8">
+                            <div class="vid-butn">
+                                <span class="icon"><i class="ti-control-play"></i></span>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- When & Where section -->
+    <div id="whenwhere" class="when-where section-padding" data-scroll-index="6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center animate-box" data-animate-effect="fadeInUp">
+                    <h6 class="section-subtitle">Agenda la fecha</h6>
+                    <h2 class="section-title">Cuándo y Dónde?</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                    <div class="img left">
+                        <img src="images/whenwhere/01.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 valign animate-box" data-animate-effect="fadeInRight">
+                    <div class="content">
+                        <div class="date">
+                            <h3>24</h3>
+                            <h6>Febrero 2024</h6>
+                        </div>
+                        <div class="cont">
+                            <div class="info">
+                                <h6>¿Estás preparado?</h6>
+                            </div>
+                            <h4>Ceremonia de boda</h4>
+                            <ul class="list-unstyled cont-list">
+                                <li>
+                                    <div class="icon"> <span class="ti-location-pin"></span> </div>
+                                    <div class="text">
+                                        <p>Iglesia católica
+                                            <br>Punta Islita
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"> <span class="ti-time"></span> </div>
+                                    <div class="text">
+                                        <p>2:30pm</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"> <span class=""></span> </div>
+                                    <div class="text">
+                                        <a href="https://goo.gl/maps/tEo8QoBTF95M7j2d8"><input class="btn" value="Ver Mapa" type="button"></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 order2 valign animate-box" data-animate-effect="fadeInLeft">
+                    <div class="content">
+                        <div class="date">
+                            <h3>24</h3>
+                            <h6>Febrero 2024</h6>
+                        </div>
+                        <div class="cont">
+                            <div class="info">
+                                <h6>¿Estás preparado?</h6>
+                            </div>
+                            <h4>Cóctel</h4>
+                            <ul class="list-unstyled cont-list">
+                                <li>
+                                    <div class="icon"> <span class="ti-location-pin"></span> </div>
+                                    <div class="text">
+                                        <p>Playa San Miguel
+                                            <br>Guanacaste.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"> <span class="ti-time"></span> </div>
+                                    <div class="text">
+                                        <p>5:00pm</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon"> <span class=""></span> </div>
+                                    <div class="text">
+                                        <a href="https://goo.gl/maps/Vm285Dj8q3DyVp788"><input class="btn" value="Ver Mapa" type="button"></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 order1 animate-box" data-animate-effect="fadeInRight">
+                    <div class="img">
+                        <img src="images/whenwhere/02.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner section -->
+    <div id="banner" class="section-padding bg-img bg-fixed" data-overlay-dark="1" data-background="images/banner/1.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="section-head col-md-12">
+                    <h6>Agenda la fecha</h6>
+                    <h2>¡Espero verte!<br></h2>
+                    <h1>24.02.2024</h1>
+                    <h1><i class="ti-heart"></i></h1>
+                    <h6>Compartir estos momentos <br><br>
+                        con ustedes los hace inolvidables.</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gift Registry section -->
+    <div id="gift" class="gift-registry" data-scroll-index="8">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h6 class="section-subtitle">Regalos</h6>
+                    <div class="text">
+                        <p>¡Y vos sos parte de este sueño! El obsequio es opcional, pero tu presencia obligatoria.
+                            <br>Con su asistencia estaríamos más que agradecidos, pero si quieren obsequiarnos algo 
+                            <br>más pueden hacerlo por medio de: <br><br>
+                        </p>
+                    </div>
+                    <!-- <h2 class="section-title">Con su asistencia estaríamos más que agradecidos pero si quieren obsequiarnos algo más pueden hacer una transferencia bancaria.</h2>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                        <div class="">
+                            <h6 class="section-subtitle">Depósito SINPE Móvil</h6>
+                            <p>89687993<br>
+                            Cinthia Maria Quesada Carvajal<br>
+                            Alias: David y Cinthia<p><br>
+                        </div>
+                        <div class="">
+                            <h6 class="section-subtitle">Cuenta Banco Nacional</h6>
+                            <p>Nro. Cuenta: 200-01-229-085175-7<br>
+                            Nro. IBAN: CR55015112920010851753<br>
+                            Titular: Quesada Carvajal Cinthia<br><br>
+                        </div>
+                        <div class="">
+                            <h6 class="section-subtitle">Cuenta Banco de Costa Rica</h6>
+                            Nro. Cuenta: 00127396550<br>
+                            Nro. IBAN: CR27015202001273965507<br>
+                            Titular: Rojas Solis David<br><br>
+                        </div>
+                        <div class="">
+                            <h6 class="section-subtitle">Cofre de la mesa de regalos</h6>
+                            <p>En efectivo en sobres<p><br>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- RSVP Form section -->
+    <div id="rsvp" class="rsvp section-padding bg-img bg-fixed" data-background="images/banner/2.jpg" data-scroll-index="7">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 bg-white p-60">
+                    <h2 class="text-center">Hemos reservado 4 <br>espacios para ti</br></h2>
+                    <h6 class="text-center">Favor confirmar antes del 24 de diciembre, 2023</h6>
+                        <div class="text-center">
+                            <input class="btn" value="Confirmar asistencia" type="button" onclick="window.location.href='confirmar-asistencia.html'">
+                        </div>                  
+                                
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!--  section -->
+    <div id="welcome" class="welcome section-padding">
+         <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="welcome-mt">
+                    </div>
+                </div>
+                <div class="col-md-8 offset-md-2 text-center"></div>
+            </div>
+        </div>
+    </div>  
+
+    <!-- Instagram section -->
+    <div class="insta">
+        <div class="container flex">
+            <div class="img">
+                <a href="#0"> <img src="images/insta/1.jpg" alt=""> </a> <i class="ti-instagram"></i>
+            </div>
+            <div class="img">
+                <a href="#0"> <img src="images/insta/2.jpg" alt=""> </a> <i class="ti-instagram"></i>
+            </div>
+            <div class="img">
+                <a href="#0"> <img src="images/insta/3.jpg" alt=""> </a> <i class="ti-instagram"></i>
+            </div>
+            <div class="img">
+                <a href="#0"> <img src="images/insta/4.jpg" alt=""> </a> <i class="ti-instagram"></i>
+            </div>
+            <div class="img">
+                <a href="#0"> <img src="images/insta/5.jpg" alt=""> </a> <i class="ti-instagram"></i>
+            </div>
+            <div class="follow">
+                <a href="#0" class="text-bg"> <span><i class="ti-instagram"></i> #DavidCinthia</span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer id="footer">
+        <div class="container">
+            <div class="top-footer">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="section-padding">
+                            <h2><span>David <small>&amp;</small> Cinthia</span></h2>
+                            <h6>24 de febrero, 2024</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-footer">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Nos gustaría que nos acompañes en este día tan especial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/sticky-kit.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/template.js"></script>
+</body>
+</html>
